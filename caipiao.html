@@ -38,15 +38,17 @@ function Caipiao(count,aheadCount,rearCount){
 	var ahead = new Array(aheadCount),//前区
 		rear = new Array(rearCount),//后区
 		result = new Array(count),
+		aheadRange = aheadCount==6?33:35,
+		rearRange = rearCount==1?16:12,
 		i,j,len,temp;
 	for(j=0;j<result.length;++j){
 		for(i=0;i<ahead.length;++i){
-			temp = getNumber(ahead,i,35);
+			temp = getNumber(ahead,i,aheadRange);
 			ahead[i] = temp;
 		}
 		ahead.sort(compare);
 		for(i=0;i<rear.length;++i){
-			temp = getNumber(rear,i,12);
+			temp = getNumber(rear,i,rearRange);
 			rear[i] = temp;
 		}
 		rear.sort(compare);
@@ -54,13 +56,12 @@ function Caipiao(count,aheadCount,rearCount){
 	}
 	document.getElementById("result").innerHTML = result.join("<br/>");
 	//document.getElementById("result").innerHTML = result[result.length-1];
-
 }
-
 document.getElementById("display").onclick = function(){
 	var count = Number.parseInt(document.getElementById("count").value),
 		type = Number.parseInt(document.getElementById("type").value),
 		numCount = 7;
+
 	Caipiao(count,numCount-type,type);//显示的注数,前区，后区
 }
 </script>
