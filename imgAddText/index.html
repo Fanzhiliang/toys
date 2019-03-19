@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片中添加文字</title>
+	<script src="./img_add_text.js"></script>
+</head>
+<body>
+	<img id="test" src="" alt="">
+</body>
+<script>
+	ImgAddText.getImage({
+		src: './test.jpg',
+		type: 'image/png',
+		list: [
+			{font: '24px Arial',color: 'rgba(255,0,0,0.5)',x: 250,y: 250,text: '超级无敌全勤奖'},
+			{font: '30px Arial',color: '#000000',x: 230,y: 300,text: '获奖者：王小明'}
+		]
+	}).then(function(res){
+		document.getElementById('test').src = res;
+	}).catch(function(err){
+		console.warn(err);
+	});
+</script>
+</html>
