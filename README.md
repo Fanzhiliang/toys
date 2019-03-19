@@ -1,3 +1,3 @@
-# caipiao ²ÊÆ±
-# getUA Êä³öä¯ÀÀÆ÷ÄÚºË
-# imgAddText ¼òµ¥µÄcanvasÍ¼Æ¬²åÈëÎÄ×Ö²å¼ş
+ï»¿# caipiao å½©ç¥¨
+# getUA è¾“å‡ºæµè§ˆå™¨å†…æ ¸
+# imgAddText ç®€å•çš„canvaså›¾ç‰‡æ’å…¥æ–‡å­—æ’ä»¶
